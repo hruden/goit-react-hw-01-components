@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Transaction = styled.table`
     width: 500px;
-    margin: 60px auto;
+    margin: 0 auto;
     text-align: center;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

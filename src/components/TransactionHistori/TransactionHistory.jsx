@@ -1,4 +1,5 @@
-import { Column, ColumnName, Transaction } from "./TransactionHistory.styled"
+import { Transactions } from "./Transaction";
+import { Transaction, ColumnName} from "./TransactionHistory.styled"
 import PropTypes from 'prop-types';
 
 export const TransactionHistory = ({items}) => {
@@ -14,13 +15,7 @@ export const TransactionHistory = ({items}) => {
                 </ColumnName>
                 {items.map(({id, amount, type, currency}) => {
                 return (
-                <Column>
-                    <tr key={id}>
-                        <td>{type}</td>
-                        <td>{amount}</td>
-                        <td>{currency}</td>
-                    </tr>
-                </Column>
+                    <Transactions key={id} amount={amount} type={type} id={id} currency={currency}/>
                 )
             })
             }
